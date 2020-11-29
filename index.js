@@ -77,18 +77,36 @@ const Car = function(make,speed){
     this.speed = speed
 
 }
-let honda = new Car("honda",30)
-let toyotal = new Car("toyota",70)
+let honda = new Car("Honda",30)
+let toyota = new Car("Toyota",70)
 
 Car.prototype.accelerate = function (){
-   return this.speed +=10
+  
+ console.log(`${this.make } Accelerate in a greater speed of  ${this.speed +=10}`)
 
 }
 
 
 Car.prototype.brake = function (){
-   return  this.speed -=5
+   console.log(`${this.make} Applied a break in ${this.speed -=5}`)
 
 }
-console.log(honda.accelerate())
-console.log(honda.brake())
+honda.accelerate()
+honda.brake()
+toyota.accelerate()
+toyota.brake()
+//ES6 class
+//class decleration 
+class Person {
+    // The constructor for the class person take arg we as properties we want the object instatiate from the class
+    // This consructor is fire or call when new object is created
+  constructor(firstName,birthYear){
+      // Once new object is created,constructor is invoke return new object which is store in a variable "john"
+     this.firstName = firstName
+     this.birthYear = birthYear
+
+  }
+
+
+}
+const john = new Person("John",1980)
